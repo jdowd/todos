@@ -20,3 +20,19 @@ describe Todo, '#completed?' do
     expect(todo).to_not be_completed
   end
 end
+
+describe Todo, '#mark_complete' do
+  it "completes the todo" do
+    todo = Todo.new
+    todo.mark_complete
+    expect(todo).to be_completed
+  end
+end
+
+describe Todo, '#mark_incomplete' do
+  it "changes the todo to incomplete" do
+    todo = Todo.new
+    todo.mark_incomplete
+    expect(todo).to_not be_completed
+  end
+end

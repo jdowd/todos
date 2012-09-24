@@ -9,4 +9,14 @@ class Todo < ActiveRecord::Base
     completed_at?
   end
   
+  def mark_complete
+    self.completed_at = Time.now
+    save
+  end
+  
+  def mark_incomplete
+    self.completed_at = nil
+    save
+  end
+  
 end
