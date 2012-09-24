@@ -1,0 +1,5 @@
+= link_to 'Create a Todo', new_todo_path, rel: 'create-todo'
+
+%ul.todos
+  - @todos.each do |todo|
+    %li= todo.title
