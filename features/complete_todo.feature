@@ -9,6 +9,13 @@ Feature: Complete todos
     And I complete the todo "Buy some milk"
     Then "Buy some milk" should be marked completed
   
+  Scenario: mark a completed todo incomplete
+    Given I have signed in
+    When I create a todo titled "Buy some milk"
+    And I complete the todo "Buy some milk"
+    And I mark the todo "Buy some milk" incomplete
+    Then "Buy some milk" should not be marked completed
+  
   
   
 
